@@ -2,6 +2,9 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense'
 
 function App() {
+  const getData = (data) => {
+    console.log(data);
+  }
   const expenses = [
     {
       id: 'e1',
@@ -25,7 +28,7 @@ function App() {
   ];
   return (
     <div>
-      <NewExpense />
+      <NewExpense expenseData={getData}/>
       <Expenses expenses = {expenses}/>
     </div>
   );
